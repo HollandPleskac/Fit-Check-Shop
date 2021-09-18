@@ -1,0 +1,36 @@
+/* colors: #EFFAFB, #FFC903, #51BEA5, #2E6386 */
+
+#top-bar{
+    height: 70px;
+    background-color: #EFFAFB;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#body{
+    padding: 0;
+    margin: 0;
+}
+#logo{
+    float:left;
+    margin: 15px;
+}
+
+.top-bar-section{
+    margin: 1px;
+    height: 100%;
+}
+
+#top-bar-button{
+    position: relative;
+    top: -50px;
+    float: right;
+    background-color: green;
+    padding: 10px
+
+}
+
+#menu-bar{
+    
+}
