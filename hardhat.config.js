@@ -27,13 +27,13 @@ task("credentials", "Prints the private key and infura endpoint", async (taskarg
  */
 module.exports = {
   solidity: "0.8.4",
-  // networks: {
-  //   hardhat: {
-  //     chainId: 1337 // make sure everything works
-  //   },
-  //   rinkeby: {
-  //     url: process.env.INFURA_ENDPOINT,
-  //     accounts: [`0x${process.env.META_MASK_PRIVATE_KEY}`]
-  //   }
-  // }
+  networks: {
+    hardhat: {
+      chainId: 1337 // make sure everything works
+    },
+    rinkeby: {
+      url: process.env.INFURA_ENDPOINT,
+      accounts: [`0x${process.env.META_MASK_PRIVATE_KEY}`]
+    }
+  }
 };
