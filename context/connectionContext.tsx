@@ -29,7 +29,7 @@ export const ConnectionContextProvider: React.FC = (props) => {
   }
 
   useEffect(() => {
-    if (true) {
+    // if ( check for contract ) {
       const setConnectionState = async () => {
         if (!(await isMetaMaskInstalled())) {
           setConnection('NOT INSTALLED')
@@ -53,7 +53,7 @@ export const ConnectionContextProvider: React.FC = (props) => {
         console.log('accounts changed', accounts)
         setConnectionState()
       })
-    }
+    // }
   }, [])
 
   const contextValue: ConnectionObj = {
