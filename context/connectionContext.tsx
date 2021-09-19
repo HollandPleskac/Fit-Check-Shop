@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react'
 
+declare let window: any // typescript window.ethereum fix
+
 const url = 'http://localhost:3000/'
 // const url = 'https://{INSERT_PROJECT}.vercel.app/'
+
 type ConnectionObj = {
   connection: string
-  account: string
+  account: string | null
 }
 
 const ConnectionContext = React.createContext<ConnectionObj>({
@@ -14,7 +17,7 @@ const ConnectionContext = React.createContext<ConnectionObj>({
 
 export const ConnectionContextProvider: React.FC = (props) => {
   const [connection, setConnection] = useState('')
-  const [account, setAccount] = useState('')
+  const [account, setAccount] = useState(null)
 
   const isMetaMaskInstalled = async () => {
     // if they dont have metamask 'ethereum' doesnt exist, need to use 'window.ethereum'
@@ -23,36 +26,36 @@ export const ConnectionContextProvider: React.FC = (props) => {
   }
 
   const isMetaMaskConnected = async () => {
-    const accounts = await ethereum.request({ method: 'eth_accounts' })
+    const accounts = await window.ethereum.request({ method: 'eth_accounts' })
     if (accounts.length !== 0) return true
     return false
   }
 
   useEffect(() => {
     // if ( check for contract ) {
-      const setConnectionState = async () => {
-        if (!(await isMetaMaskInstalled())) {
-          setConnection('NOT INSTALLED')
-          setAccount(null)
-          return
-        } else if (await isMetaMaskConnected()) {
-          const accounts = await ethereum.request({ method: 'eth_accounts' })
-          setConnection('CONNECTED')
-          setAccount(accounts[0])
-          return
-        } else {
-          setConnection('DISCONNECTED')
-          setAccount(null)
-          return
-        }
+    const setConnectionState = async () => {
+      if (!(await isMetaMaskInstalled())) {
+        setConnection('NOT INSTALLED')
+        setAccount(null)
+        return
+      } else if (await isMetaMaskConnected()) {
+        const accounts = await window.ethereum.request({ method: 'eth_accounts' })
+        setConnection('CONNECTED')
+        setAccount(accounts[0])
+        return
+      } else {
+        setConnection('DISCONNECTED')
+        setAccount(null)
+        return
       }
+    }
 
-      setConnectionState() // initial state
+    setConnectionState() // initial state
 
-      window.ethereum.on('accountsChanged', function (accounts: {}) {
-        console.log('accounts changed', accounts)
-        setConnectionState()
-      })
+    window.ethereum.on('accountsChanged', function (accounts: {}) {
+      console.log('accounts changed', accounts)
+      setConnectionState()
+    })
     // }
   }, [])
 
