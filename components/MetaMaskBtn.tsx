@@ -16,7 +16,7 @@ const MetaMaskBtn: React.FC<{ connection: string }> = (props) => {
   return (
     <button
       onClick={metaMaskBtnHandler}
-      className='px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition ease-in duration-100'
+      className='px-4 py-2 bg-greenColor text-white rounded-lg hover:bg-green-600 transition ease-in duration-100'
     >
       {connection === 'DISCONNECTED' && 'Connect to MetaMask'}
       {connection === 'NOT INSTALLED' && 'Install MetaMask'}
