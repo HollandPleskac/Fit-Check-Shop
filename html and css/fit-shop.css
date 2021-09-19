@@ -1,4 +1,3 @@
-/* colors: #EFFAFB, #FFC903, #51BEA5, #2E6386 */
 
 #top-bar{
     height: 100px;
@@ -71,7 +70,6 @@
 
     color: white;
     font-family: 'Nunito', sans-serif;
-    /* text-decoration: none;  */
     margin: 20px;
     padding: 0px 10px 0px 10px;
     border-right: 1px solid white;
@@ -80,7 +78,6 @@
     display:inline-block;
     position: relative;
     top: -10px;
-    /* float:left; */
 
 } 
 #page-container{
