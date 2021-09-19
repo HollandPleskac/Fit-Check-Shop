@@ -1,7 +1,6 @@
-// find out how to fix window.ethereum typescript complaint
-// probably research interfaces or types or something
-
 import React from 'react'
+
+declare let window: any
 
 const MetaMaskBtn: React.FC<{ connection: string }> = (props) => {
   const connection = props.connection
@@ -9,11 +8,7 @@ const MetaMaskBtn: React.FC<{ connection: string }> = (props) => {
   const metaMaskBtnHandler = async () => {
     if (connection === 'DISCONNECTED')
       await window.ethereum.request({ method: 'eth_requestAccounts' })
-    else if (connection === 'NOT INSTALLED')
-      // router.push(
-      //   'https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn'
-      // )
-      console.log('not connected')
+    else if (connection === 'NOT INSTALLED') console.log('not connected')
     else if (connection === 'CONNECTED')
       console.log('Disconnect from MetaMask in the chrome extension')
   }
