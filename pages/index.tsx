@@ -15,7 +15,6 @@ const HomePage = () => {
   const sendEtherHandler = async (amount: number) => {
     console.log(window.ethereum)
     console.log(connectionCtx.account)
-    console.log('amount', amount)
     if (
       typeof window.ethereum !== undefined &&
       connectionCtx.account !== null
