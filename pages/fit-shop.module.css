@@ -1,0 +1,117 @@
+/* colors: #EFFAFB, #FFC903, #51BEA5, #2E6386 */
+
+.topBar {
+  height: 100px;
+  background-color: #effafb;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#body {
+  padding: 0;
+  margin: 0;
+}
+.logo {
+  float: left;
+  margin: 15px;
+}
+
+.topBarSection {
+  font-family: 'Nunito', sans-serif;
+  margin-right: 8px;
+  height: 100%;
+}
+.top-bar-section h1 {
+  font-size: 40px;
+
+  text-align: center;
+  margin: 15 0 0 0;
+}
+
+.topBarButton {
+  position: relative;
+  top: -50px;
+  float: right;
+  background-color: #2e6386;
+  color: white;
+  padding: 10px;
+}
+
+.menuBar {
+  text-align: center;
+  width: 100%;
+  margin: 0 0 10 0;
+  height: 70px;
+  background-color: #51bea5;
+}
+.menuBarContainer {
+  color: white;
+  background-color: #51bea5;
+  width: 100%;
+  font-size: 13px;
+}
+.menuBarSpacing {
+  width: 100%;
+  margin: 0 auto;
+  height: 40px;
+}
+.clear {
+  clear: both;
+}
+.noBorder {
+  border: none !important;
+}
+.menuBar p {
+  color: white;
+  font-family: 'Nunito', sans-serif;
+  /* text-decoration: none;  */
+  margin: 20px;
+  padding: 0px 10px 0px 10px;
+  border-right: 1px solid white;
+  font-size: 20px;
+  height: 60px;
+  display: inline-block;
+  position: relative;
+  top: -10px;
+  /* float:left; */
+}
+.pageContainer {
+  width: 100%;
+  margin: 0 auto;
+}
+.mainImage {
+  background-color: white;
+  height: 100%;
+}
+.leftButton {
+  position: relative;
+  top: 250px;
+  left: 500px;
+  float: left;
+}
+.rightButton {
+  position: relative;
+  top: 250px;
+  left: -550px;
+  float: right;
+}
+.mainPhoto {
+  border: 3px solid black;
+  width: 400px;
+  height: 400px;
+  position: absolute;
+
+  left: 38%;
+  top: 30%;
+}
+.buyButton {
+  background-color: #2e6386;
+  color: white;
+  font-size: 25px;
+  height: 50px;
+  width: 300px;
+  position: relative;
+  top: 550px;
+  left: 700px;
+}

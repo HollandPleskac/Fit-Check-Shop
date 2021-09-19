@@ -14,6 +14,6 @@
     "isolatedModules": true,
     "jsx": "preserve"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "context/connectionContext.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "context/connectionContext.tsx", "pages/fit-shop.jsx"],
   "exclude": ["node_modules"]
 }
