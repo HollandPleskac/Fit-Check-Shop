@@ -42,12 +42,33 @@
 
       <div id = 'page-container'>
         <div id = 'main-image'>
-          <input type = 'image' src = 'images/left-arrow.jpg'>
+          <input type = 'image' id = 'left-button' src = 'images/left-arrow.png' width = '100' height = '100'>
+
           
-          <img src = 'images/pants1.jpg' id = 'main-photo'>
+          <div>
+            <img src = 'images/pants1.jpg' id = 'main-photo' > 
+            <button id = 'buy-button'>Buy!</button>
+          </div>
+          
+
+          <input type = 'image' id = 'right-button' src = 'images/right-arrow.png' width = '100' height = '100'>
         </div>
 
       </div>
+
+      <script type = 'text/javascript'>
+        document.getElementById('left-button').onclick= function() {
+          document.getElementById('main-photo').src = 'images/pants2.jpg'
+        }
+        document.getElementById('right-button').onclick= function() {
+          document.getElementById('main-photo').src = 'images/pants1.jpg'
+        }
+
+      </script>
+
+     
+
+      
 
   
     

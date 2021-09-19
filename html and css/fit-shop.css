@@ -1,7 +1,7 @@
 /* colors: #EFFAFB, #FFC903, #51BEA5, #2E6386 */
 
 #top-bar{
-    height: 70px;
+    height: 100px;
     background-color: #EFFAFB;
     text-align: center;
     width: 100%;
@@ -18,18 +18,23 @@
 }
 
 .top-bar-section{
-    margin: 1px;
+    font-family: 'Nunito', sans-serif;
+    margin-right: 8px;
     height: 100%;
 }
 .top-bar-section h1{
-    font-family: 'Nunito', sans-serif;
+    font-size: 40px;
+    
+    text-align: center;
+    margin: 15 0 0 0
 }
 
 #top-bar-button{
     position: relative;
     top: -50px;
     float: right;
-    background-color: green;
+    background-color: #2E6386;
+    color:white;
     padding: 10px
 
 }
@@ -83,19 +88,41 @@
     margin: 0 auto;
 }
 #main-image{
-    background-color: red;
+
+    background-color: white;
     height: 100%;
 
 }
+#left-button{
+    position: relative;
+    top: 250px;
+    left: 500px;
+    float: left;
+}
+#right-button{
+    position: relative;
+    top: 250px;
+    left: -550px;
+    float: right;
+}
 #main-photo{
     border: 3px solid black;
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
     position: absolute;
-    left: 40%;
-    top: 40%;
-
-   
+    
+    left: 38%;
+    top: 30%;
+}
+#buy-button{
+    background-color: #2E6386;
+    color:white;
+    font-size: 25px;
+    height: 50px;
+    width: 300px;
+    position: relative;
+    top: 550px;
+    left: 700px;
 }
 
 
